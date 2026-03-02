@@ -1,0 +1,12 @@
+{
+  "fetched_at": "2026-03-02T23:01:25.351690",
+  "flow_segments": 79,
+  "incidents": 0,
+  "api_calls": 381,
+  "bbox": {
+    "north": 19.135,
+    "south": 19.098,
+    "west": 72.822,
+    "east": 72.87
+  }
+}

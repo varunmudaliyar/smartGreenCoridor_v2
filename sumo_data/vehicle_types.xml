@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional>
+    <vType id="car" accel="2.6" decel="4.5" sigma="0.5" length="4.5" maxSpeed="16.67" color="0.2,0.4,0.8"/>
+    <vType id="ambulance" accel="3.5" decel="5.0" sigma="0.2" length="6.0" maxSpeed="25.0" color="1.0,0.0,0.0" vClass="emergency" guiShape="emergency"/>
+</additional>

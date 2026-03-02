@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-03-02T23:02:35.739542+05:30 by Eclipse SUMO duarouter 1.25.0
+<duarouterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\Gauravi Naik\OneDrive\Desktop\smat_corridor_v2\sumo_data\andheri.net.xml"/>
+        <route-files value="C:\Users\Gauravi Naik\OneDrive\Desktop\smat_corridor_v2\sumo_data\_tmp_trip.xml"/>
+    </input>
+
+    <output>
+        <output-file value="C:\Users\Gauravi Naik\OneDrive\Desktop\smat_corridor_v2\sumo_data\_tmp_route.xml"/>
+    </output>
+
+    <report>
+        <no-warnings value="true"/>
+        <ignore-errors value="true"/>
+    </report>
+
+</duarouterConfiguration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vehicle id="t" depart="0.00">
+        <routeDistribution last="0">
+            <route cost="196.76" probability="1.00000000" edges="e73 e1232 e3496 e3511 e4932 e3445 e161"/>
+        </routeDistribution>
+    </vehicle>
+</routes>

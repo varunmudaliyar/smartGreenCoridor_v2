@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <input>
+        <net-file value="andheri.net.xml"/>
+        <route-files value="routes.rou.xml"/>
+        <additional-files value="vehicle_types.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+        <step-length value="1"/>
+    </time>
+    <processing>
+        <time-to-teleport value="300"/>
+    </processing>
+    <report>
+        <no-warnings value="true"/>
+        <no-step-log value="true"/>
+    </report>
+</configuration>

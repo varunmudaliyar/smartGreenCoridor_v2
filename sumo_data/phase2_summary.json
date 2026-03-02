@@ -1,0 +1,11 @@
+{
+  "network_file": "andheri.net.xml",
+  "file_size_kb": 20013.6,
+  "edges": 4974,
+  "internal_edges": 26038,
+  "junctions": 1351,
+  "traffic_lights": 100,
+  "signal_source": "OSM/SUMO reference (traffic_lights.json)",
+  "phase1_signals": 883,
+  "phase2_signals": 100
+}

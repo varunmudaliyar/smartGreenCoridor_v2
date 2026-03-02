@@ -1,0 +1,74 @@
+[
+  {
+    "id": 0,
+    "name": "Kokilaben Dhirubhai Ambani Hospital",
+    "lat": 19.11898,
+    "lon": 72.8462,
+    "edge": "e11",
+    "node": "n7",
+    "distance_m": 21.1
+  },
+  {
+    "id": 1,
+    "name": "Holy Spirit Hospital",
+    "lat": 19.10833,
+    "lon": 72.83697,
+    "edge": "e181",
+    "node": "n107",
+    "distance_m": 36.8
+  },
+  {
+    "id": 2,
+    "name": "Criticare Hospital",
+    "lat": 19.127,
+    "lon": 72.84,
+    "edge": "e959",
+    "node": "n489",
+    "distance_m": 0.0
+  },
+  {
+    "id": 3,
+    "name": "SRV Hospital",
+    "lat": 19.11604,
+    "lon": 72.83,
+    "edge": "e495",
+    "node": "n275",
+    "distance_m": 4.4
+  },
+  {
+    "id": 4,
+    "name": "Seven Hills Hospital",
+    "lat": 19.10922,
+    "lon": 72.85395,
+    "edge": "e317",
+    "node": "n180",
+    "distance_m": 25.0
+  },
+  {
+    "id": 5,
+    "name": "Akshar Hospital",
+    "lat": 19.12503,
+    "lon": 72.85503,
+    "edge": "e57",
+    "node": "n35",
+    "distance_m": 4.6
+  },
+  {
+    "id": 6,
+    "name": "Nanavati Hospital",
+    "lat": 19.11,
+    "lon": 72.82996,
+    "edge": "e161",
+    "node": "n95",
+    "distance_m": 4.2
+  },
+  {
+    "id": 7,
+    "name": "Dr LH Hiranandani Hospital",
+    "lat": 19.11502,
+    "lon": 72.84297,
+    "edge": "e73",
+    "node": "n44",
+    "distance_m": 3.9
+  }
+]

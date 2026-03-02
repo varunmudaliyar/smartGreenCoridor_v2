@@ -1,0 +1,1066 @@
+{
+  "total_hospitals": 8,
+  "total_routes": 56,
+  "assigned_routes": 56,
+  "routes": [
+    {
+      "source_index": 0,
+      "dest_index": 1,
+      "source_name": "Kokilaben Dhirubhai Ambani Hospital",
+      "dest_name": "Holy Spirit Hospital",
+      "route_edges": [
+        "e11",
+        "e13",
+        "e3645",
+        "e973",
+        "e181"
+      ],
+      "route_length": 5,
+      "distance_km": 1.53
+    },
+    {
+      "source_index": 0,
+      "dest_index": 2,
+      "source_name": "Kokilaben Dhirubhai Ambani Hospital",
+      "dest_name": "Criticare Hospital",
+      "route_edges": [
+        "e11",
+        "e13",
+        "e4245",
+        "e3133",
+        "e3246",
+        "e3420",
+        "e2663",
+        "e959"
+      ],
+      "route_length": 8,
+      "distance_km": 1.1
+    },
+    {
+      "source_index": 0,
+      "dest_index": 3,
+      "source_name": "Kokilaben Dhirubhai Ambani Hospital",
+      "dest_name": "SRV Hospital",
+      "route_edges": [
+        "e11",
+        "e13",
+        "e1013",
+        "e4496",
+        "e4242",
+        "e1968",
+        "e495"
+      ],
+      "route_length": 7,
+      "distance_km": 1.73
+    },
+    {
+      "source_index": 0,
+      "dest_index": 4,
+      "source_name": "Kokilaben Dhirubhai Ambani Hospital",
+      "dest_name": "Seven Hills Hospital",
+      "route_edges": [
+        "e11",
+        "e13",
+        "e1013",
+        "e2648",
+        "e72",
+        "e858",
+        "e494",
+        "e3368",
+        "e317"
+      ],
+      "route_length": 9,
+      "distance_km": 1.36
+    },
+    {
+      "source_index": 0,
+      "dest_index": 5,
+      "source_name": "Kokilaben Dhirubhai Ambani Hospital",
+      "dest_name": "Akshar Hospital",
+      "route_edges": [
+        "e11",
+        "e13",
+        "e1013",
+        "e4496",
+        "e3123",
+        "e21",
+        "e2861",
+        "e4805",
+        "e283",
+        "e2803",
+        "e1458",
+        "e57"
+      ],
+      "route_length": 12,
+      "distance_km": 1.15
+    },
+    {
+      "source_index": 0,
+      "dest_index": 6,
+      "source_name": "Kokilaben Dhirubhai Ambani Hospital",
+      "dest_name": "Nanavati Hospital",
+      "route_edges": [
+        "e11",
+        "e13",
+        "e1013",
+        "e4496",
+        "e3496",
+        "e3511",
+        "e4932",
+        "e3445",
+        "e161"
+      ],
+      "route_length": 9,
+      "distance_km": 1.98
+    },
+    {
+      "source_index": 0,
+      "dest_index": 7,
+      "source_name": "Kokilaben Dhirubhai Ambani Hospital",
+      "dest_name": "Dr LH Hiranandani Hospital",
+      "route_edges": [
+        "e11",
+        "e13",
+        "e1013",
+        "e2648",
+        "e73"
+      ],
+      "route_length": 5,
+      "distance_km": 0.56
+    },
+    {
+      "source_index": 1,
+      "dest_index": 0,
+      "source_name": "Holy Spirit Hospital",
+      "dest_name": "Kokilaben Dhirubhai Ambani Hospital",
+      "route_edges": [
+        "e181",
+        "e240",
+        "e4339",
+        "e1758",
+        "e1015",
+        "e1819",
+        "e1821",
+        "e883",
+        "e885",
+        "e11"
+      ],
+      "route_length": 10,
+      "distance_km": 1.53
+    },
+    {
+      "source_index": 1,
+      "dest_index": 2,
+      "source_name": "Holy Spirit Hospital",
+      "dest_name": "Criticare Hospital",
+      "route_edges": [
+        "e181",
+        "e240",
+        "e4339",
+        "e3131",
+        "e3133",
+        "e3246",
+        "e3420",
+        "e2663",
+        "e959"
+      ],
+      "route_length": 9,
+      "distance_km": 2.1
+    },
+    {
+      "source_index": 1,
+      "dest_index": 3,
+      "source_name": "Holy Spirit Hospital",
+      "dest_name": "SRV Hospital",
+      "route_edges": [
+        "e181",
+        "e1323",
+        "e1207",
+        "e1209",
+        "e1211",
+        "e3025",
+        "e4881",
+        "e495"
+      ],
+      "route_length": 8,
+      "distance_km": 1.13
+    },
+    {
+      "source_index": 1,
+      "dest_index": 4,
+      "source_name": "Holy Spirit Hospital",
+      "dest_name": "Seven Hills Hospital",
+      "route_edges": [
+        "e181",
+        "e240",
+        "e3440",
+        "e72",
+        "e858",
+        "e494",
+        "e3368",
+        "e317"
+      ],
+      "route_length": 8,
+      "distance_km": 1.79
+    },
+    {
+      "source_index": 1,
+      "dest_index": 5,
+      "source_name": "Holy Spirit Hospital",
+      "dest_name": "Akshar Hospital",
+      "route_edges": [
+        "e181",
+        "e240",
+        "e3255",
+        "e3123",
+        "e21",
+        "e2861",
+        "e4805",
+        "e283",
+        "e2803",
+        "e1458",
+        "e57"
+      ],
+      "route_length": 11,
+      "distance_km": 2.65
+    },
+    {
+      "source_index": 1,
+      "dest_index": 6,
+      "source_name": "Holy Spirit Hospital",
+      "dest_name": "Nanavati Hospital",
+      "route_edges": [
+        "e181",
+        "e249",
+        "e3875",
+        "e4932",
+        "e3445",
+        "e161"
+      ],
+      "route_length": 6,
+      "distance_km": 0.76
+    },
+    {
+      "source_index": 1,
+      "dest_index": 7,
+      "source_name": "Holy Spirit Hospital",
+      "dest_name": "Dr LH Hiranandani Hospital",
+      "route_edges": [
+        "e181",
+        "e240",
+        "e3440",
+        "e73"
+      ],
+      "route_length": 4,
+      "distance_km": 0.98
+    },
+    {
+      "source_index": 2,
+      "dest_index": 0,
+      "source_name": "Criticare Hospital",
+      "dest_name": "Kokilaben Dhirubhai Ambani Hospital",
+      "route_edges": [
+        "e959",
+        "e1393",
+        "e3245",
+        "e3134",
+        "e4246",
+        "e14",
+        "e3010",
+        "e866",
+        "e885",
+        "e11"
+      ],
+      "route_length": 10,
+      "distance_km": 1.1
+    },
+    {
+      "source_index": 2,
+      "dest_index": 1,
+      "source_name": "Criticare Hospital",
+      "dest_name": "Holy Spirit Hospital",
+      "route_edges": [
+        "e959",
+        "e1393",
+        "e3245",
+        "e3134",
+        "e3132",
+        "e4340",
+        "e973",
+        "e181"
+      ],
+      "route_length": 8,
+      "distance_km": 2.1
+    },
+    {
+      "source_index": 2,
+      "dest_index": 3,
+      "source_name": "Criticare Hospital",
+      "dest_name": "SRV Hospital",
+      "route_edges": [
+        "e959",
+        "e1393",
+        "e1989",
+        "e1975",
+        "e432",
+        "e430",
+        "e1968",
+        "e495"
+      ],
+      "route_length": 8,
+      "distance_km": 1.61
+    },
+    {
+      "source_index": 2,
+      "dest_index": 4,
+      "source_name": "Criticare Hospital",
+      "dest_name": "Seven Hills Hospital",
+      "route_edges": [
+        "e959",
+        "e1393",
+        "e3245",
+        "e3134",
+        "e4168",
+        "e548",
+        "e858",
+        "e494",
+        "e3368",
+        "e317"
+      ],
+      "route_length": 10,
+      "distance_km": 2.46
+    },
+    {
+      "source_index": 2,
+      "dest_index": 5,
+      "source_name": "Criticare Hospital",
+      "dest_name": "Akshar Hospital",
+      "route_edges": [
+        "e959",
+        "e1274",
+        "e1272",
+        "e1270",
+        "e1268",
+        "e928",
+        "e708",
+        "e706",
+        "e704",
+        "e4111",
+        "e3882",
+        "e4966",
+        "e1739",
+        "e2650",
+        "e55",
+        "e57"
+      ],
+      "route_length": 16,
+      "distance_km": 1.59
+    },
+    {
+      "source_index": 2,
+      "dest_index": 6,
+      "source_name": "Criticare Hospital",
+      "dest_name": "Nanavati Hospital",
+      "route_edges": [
+        "e959",
+        "e1393",
+        "e1989",
+        "e1975",
+        "e432",
+        "e4329",
+        "e3511",
+        "e4932",
+        "e3445",
+        "e161"
+      ],
+      "route_length": 10,
+      "distance_km": 2.16
+    },
+    {
+      "source_index": 2,
+      "dest_index": 7,
+      "source_name": "Criticare Hospital",
+      "dest_name": "Dr LH Hiranandani Hospital",
+      "route_edges": [
+        "e959",
+        "e1393",
+        "e3245",
+        "e3134",
+        "e4168",
+        "e548",
+        "e71",
+        "e73"
+      ],
+      "route_length": 8,
+      "distance_km": 1.37
+    },
+    {
+      "source_index": 3,
+      "dest_index": 0,
+      "source_name": "SRV Hospital",
+      "dest_name": "Kokilaben Dhirubhai Ambani Hospital",
+      "route_edges": [
+        "e495",
+        "e4722",
+        "e1343",
+        "e671",
+        "e2696",
+        "e2647",
+        "e1015",
+        "e1819",
+        "e1821",
+        "e883",
+        "e885",
+        "e11"
+      ],
+      "route_length": 12,
+      "distance_km": 1.73
+    },
+    {
+      "source_index": 3,
+      "dest_index": 1,
+      "source_name": "SRV Hospital",
+      "dest_name": "Holy Spirit Hospital",
+      "route_edges": [
+        "e495",
+        "e4248",
+        "e242",
+        "e240",
+        "e973",
+        "e181"
+      ],
+      "route_length": 6,
+      "distance_km": 1.13
+    },
+    {
+      "source_index": 3,
+      "dest_index": 2,
+      "source_name": "SRV Hospital",
+      "dest_name": "Criticare Hospital",
+      "route_edges": [
+        "e495",
+        "e4722",
+        "e91",
+        "e93",
+        "e4330",
+        "e431",
+        "e1976",
+        "e1990",
+        "e3420",
+        "e2663",
+        "e959"
+      ],
+      "route_length": 11,
+      "distance_km": 1.61
+    },
+    {
+      "source_index": 3,
+      "dest_index": 4,
+      "source_name": "SRV Hospital",
+      "dest_name": "Seven Hills Hospital",
+      "route_edges": [
+        "e495",
+        "e4722",
+        "e1343",
+        "e671",
+        "e152",
+        "e150",
+        "e494",
+        "e3368",
+        "e317"
+      ],
+      "route_length": 9,
+      "distance_km": 2.63
+    },
+    {
+      "source_index": 3,
+      "dest_index": 5,
+      "source_name": "SRV Hospital",
+      "dest_name": "Akshar Hospital",
+      "route_edges": [
+        "e495",
+        "e4722",
+        "e91",
+        "e93",
+        "e3265",
+        "e4587",
+        "e21",
+        "e2861",
+        "e4805",
+        "e283",
+        "e2803",
+        "e1458",
+        "e57"
+      ],
+      "route_length": 13,
+      "distance_km": 2.81
+    },
+    {
+      "source_index": 3,
+      "dest_index": 6,
+      "source_name": "SRV Hospital",
+      "dest_name": "Nanavati Hospital",
+      "route_edges": [
+        "e495",
+        "e4722",
+        "e91",
+        "e93",
+        "e3511",
+        "e4932",
+        "e3445",
+        "e161"
+      ],
+      "route_length": 8,
+      "distance_km": 0.67
+    },
+    {
+      "source_index": 3,
+      "dest_index": 7,
+      "source_name": "SRV Hospital",
+      "dest_name": "Dr LH Hiranandani Hospital",
+      "route_edges": [
+        "e495",
+        "e4722",
+        "e1343",
+        "e671",
+        "e2696",
+        "e73"
+      ],
+      "route_length": 6,
+      "distance_km": 1.37
+    },
+    {
+      "source_index": 4,
+      "dest_index": 0,
+      "source_name": "Seven Hills Hospital",
+      "dest_name": "Kokilaben Dhirubhai Ambani Hospital",
+      "route_edges": [
+        "e317",
+        "e4766",
+        "e3044",
+        "e792",
+        "e1362",
+        "e4495",
+        "e1015",
+        "e1819",
+        "e1821",
+        "e883",
+        "e885",
+        "e11"
+      ],
+      "route_length": 12,
+      "distance_km": 1.36
+    },
+    {
+      "source_index": 4,
+      "dest_index": 1,
+      "source_name": "Seven Hills Hospital",
+      "dest_name": "Holy Spirit Hospital",
+      "route_edges": [
+        "e317",
+        "e1186",
+        "e493",
+        "e857",
+        "e71",
+        "e3439",
+        "e973",
+        "e181"
+      ],
+      "route_length": 8,
+      "distance_km": 1.79
+    },
+    {
+      "source_index": 4,
+      "dest_index": 2,
+      "source_name": "Seven Hills Hospital",
+      "dest_name": "Criticare Hospital",
+      "route_edges": [
+        "e317",
+        "e1186",
+        "e493",
+        "e857",
+        "e547",
+        "e4167",
+        "e3133",
+        "e3246",
+        "e3420",
+        "e2663",
+        "e959"
+      ],
+      "route_length": 11,
+      "distance_km": 2.46
+    },
+    {
+      "source_index": 4,
+      "dest_index": 3,
+      "source_name": "Seven Hills Hospital",
+      "dest_name": "SRV Hospital",
+      "route_edges": [
+        "e317",
+        "e4766",
+        "e3044",
+        "e792",
+        "e1362",
+        "e4242",
+        "e1968",
+        "e495"
+      ],
+      "route_length": 8,
+      "distance_km": 2.63
+    },
+    {
+      "source_index": 4,
+      "dest_index": 5,
+      "source_name": "Seven Hills Hospital",
+      "dest_name": "Akshar Hospital",
+      "route_edges": [
+        "e317",
+        "e1186",
+        "e4923",
+        "e4805",
+        "e283",
+        "e2803",
+        "e1458",
+        "e57"
+      ],
+      "route_length": 8,
+      "distance_km": 1.76
+    },
+    {
+      "source_index": 4,
+      "dest_index": 6,
+      "source_name": "Seven Hills Hospital",
+      "dest_name": "Nanavati Hospital",
+      "route_edges": [
+        "e317",
+        "e4766",
+        "e3044",
+        "e792",
+        "e1362",
+        "e3496",
+        "e3511",
+        "e4932",
+        "e3445",
+        "e161"
+      ],
+      "route_length": 10,
+      "distance_km": 2.52
+    },
+    {
+      "source_index": 4,
+      "dest_index": 7,
+      "source_name": "Seven Hills Hospital",
+      "dest_name": "Dr LH Hiranandani Hospital",
+      "route_edges": [
+        "e317",
+        "e1186",
+        "e493",
+        "e857",
+        "e71",
+        "e73"
+      ],
+      "route_length": 6,
+      "distance_km": 1.32
+    },
+    {
+      "source_index": 5,
+      "dest_index": 0,
+      "source_name": "Akshar Hospital",
+      "dest_name": "Kokilaben Dhirubhai Ambani Hospital",
+      "route_edges": [
+        "e57",
+        "e1140",
+        "e1138",
+        "e1698",
+        "e2862",
+        "e22",
+        "e3124",
+        "e4495",
+        "e1015",
+        "e1819",
+        "e1821",
+        "e883",
+        "e885",
+        "e11"
+      ],
+      "route_length": 14,
+      "distance_km": 1.15
+    },
+    {
+      "source_index": 5,
+      "dest_index": 1,
+      "source_name": "Akshar Hospital",
+      "dest_name": "Holy Spirit Hospital",
+      "route_edges": [
+        "e57",
+        "e1140",
+        "e1138",
+        "e1698",
+        "e2862",
+        "e22",
+        "e3124",
+        "e3256",
+        "e973",
+        "e181"
+      ],
+      "route_length": 10,
+      "distance_km": 2.65
+    },
+    {
+      "source_index": 5,
+      "dest_index": 2,
+      "source_name": "Akshar Hospital",
+      "dest_name": "Criticare Hospital",
+      "route_edges": [
+        "e57",
+        "e1140",
+        "e1138",
+        "e2523",
+        "e3881",
+        "e4112",
+        "e703",
+        "e705",
+        "e707",
+        "e927",
+        "e1267",
+        "e1269",
+        "e1271",
+        "e2911",
+        "e2663",
+        "e959"
+      ],
+      "route_length": 16,
+      "distance_km": 1.59
+    },
+    {
+      "source_index": 5,
+      "dest_index": 3,
+      "source_name": "Akshar Hospital",
+      "dest_name": "SRV Hospital",
+      "route_edges": [
+        "e57",
+        "e1140",
+        "e1138",
+        "e1698",
+        "e2862",
+        "e22",
+        "e3124",
+        "e4242",
+        "e1968",
+        "e495"
+      ],
+      "route_length": 10,
+      "distance_km": 2.81
+    },
+    {
+      "source_index": 5,
+      "dest_index": 4,
+      "source_name": "Akshar Hospital",
+      "dest_name": "Seven Hills Hospital",
+      "route_edges": [
+        "e57",
+        "e1140",
+        "e1138",
+        "e1698",
+        "e4924",
+        "e3368",
+        "e317"
+      ],
+      "route_length": 7,
+      "distance_km": 1.76
+    },
+    {
+      "source_index": 5,
+      "dest_index": 6,
+      "source_name": "Akshar Hospital",
+      "dest_name": "Nanavati Hospital",
+      "route_edges": [
+        "e57",
+        "e1140",
+        "e1138",
+        "e1698",
+        "e2862",
+        "e22",
+        "e4588",
+        "e3266",
+        "e3511",
+        "e4932",
+        "e3445",
+        "e161"
+      ],
+      "route_length": 12,
+      "distance_km": 3.12
+    },
+    {
+      "source_index": 5,
+      "dest_index": 7,
+      "source_name": "Akshar Hospital",
+      "dest_name": "Dr LH Hiranandani Hospital",
+      "route_edges": [
+        "e57",
+        "e1140",
+        "e1138",
+        "e1698",
+        "e2862",
+        "e22",
+        "e3124",
+        "e4495",
+        "e2648",
+        "e73"
+      ],
+      "route_length": 10,
+      "distance_km": 1.69
+    },
+    {
+      "source_index": 6,
+      "dest_index": 0,
+      "source_name": "Nanavati Hospital",
+      "dest_name": "Kokilaben Dhirubhai Ambani Hospital",
+      "route_edges": [
+        "e161",
+        "e4132",
+        "e427",
+        "e4241",
+        "e4495",
+        "e1015",
+        "e1819",
+        "e1821",
+        "e883",
+        "e885",
+        "e11"
+      ],
+      "route_length": 11,
+      "distance_km": 1.98
+    },
+    {
+      "source_index": 6,
+      "dest_index": 1,
+      "source_name": "Nanavati Hospital",
+      "dest_name": "Holy Spirit Hospital",
+      "route_edges": [
+        "e161",
+        "e3507",
+        "e1993",
+        "e184",
+        "e240",
+        "e973",
+        "e181"
+      ],
+      "route_length": 7,
+      "distance_km": 0.76
+    },
+    {
+      "source_index": 6,
+      "dest_index": 2,
+      "source_name": "Nanavati Hospital",
+      "dest_name": "Criticare Hospital",
+      "route_edges": [
+        "e161",
+        "e3840",
+        "e431",
+        "e1976",
+        "e1990",
+        "e3420",
+        "e2663",
+        "e959"
+      ],
+      "route_length": 8,
+      "distance_km": 2.16
+    },
+    {
+      "source_index": 6,
+      "dest_index": 3,
+      "source_name": "Nanavati Hospital",
+      "dest_name": "SRV Hospital",
+      "route_edges": [
+        "e161",
+        "e4132",
+        "e427",
+        "e1968",
+        "e495"
+      ],
+      "route_length": 5,
+      "distance_km": 0.67
+    },
+    {
+      "source_index": 6,
+      "dest_index": 4,
+      "source_name": "Nanavati Hospital",
+      "dest_name": "Seven Hills Hospital",
+      "route_edges": [
+        "e161",
+        "e4132",
+        "e427",
+        "e4241",
+        "e1361",
+        "e791",
+        "e1363",
+        "e4941",
+        "e317"
+      ],
+      "route_length": 9,
+      "distance_km": 2.52
+    },
+    {
+      "source_index": 6,
+      "dest_index": 5,
+      "source_name": "Nanavati Hospital",
+      "dest_name": "Akshar Hospital",
+      "route_edges": [
+        "e161",
+        "e4132",
+        "e427",
+        "e4241",
+        "e3123",
+        "e21",
+        "e2861",
+        "e4805",
+        "e283",
+        "e2803",
+        "e1458",
+        "e57"
+      ],
+      "route_length": 12,
+      "distance_km": 3.12
+    },
+    {
+      "source_index": 6,
+      "dest_index": 7,
+      "source_name": "Nanavati Hospital",
+      "dest_name": "Dr LH Hiranandani Hospital",
+      "route_edges": [
+        "e161",
+        "e4132",
+        "e427",
+        "e4241",
+        "e4495",
+        "e2648",
+        "e73"
+      ],
+      "route_length": 7,
+      "distance_km": 1.48
+    },
+    {
+      "source_index": 7,
+      "dest_index": 0,
+      "source_name": "Dr LH Hiranandani Hospital",
+      "dest_name": "Kokilaben Dhirubhai Ambani Hospital",
+      "route_edges": [
+        "e73",
+        "e3728",
+        "e1015",
+        "e1819",
+        "e1821",
+        "e883",
+        "e885",
+        "e11"
+      ],
+      "route_length": 8,
+      "distance_km": 0.56
+    },
+    {
+      "source_index": 7,
+      "dest_index": 1,
+      "source_name": "Dr LH Hiranandani Hospital",
+      "dest_name": "Holy Spirit Hospital",
+      "route_edges": [
+        "e73",
+        "e4667",
+        "e3129",
+        "e973",
+        "e181"
+      ],
+      "route_length": 5,
+      "distance_km": 0.98
+    },
+    {
+      "source_index": 7,
+      "dest_index": 2,
+      "source_name": "Dr LH Hiranandani Hospital",
+      "dest_name": "Criticare Hospital",
+      "route_edges": [
+        "e73",
+        "e4126",
+        "e4245",
+        "e3133",
+        "e3246",
+        "e3420",
+        "e2663",
+        "e959"
+      ],
+      "route_length": 8,
+      "distance_km": 1.37
+    },
+    {
+      "source_index": 7,
+      "dest_index": 3,
+      "source_name": "Dr LH Hiranandani Hospital",
+      "dest_name": "SRV Hospital",
+      "route_edges": [
+        "e73",
+        "e1232",
+        "e4242",
+        "e1968",
+        "e495"
+      ],
+      "route_length": 5,
+      "distance_km": 1.37
+    },
+    {
+      "source_index": 7,
+      "dest_index": 4,
+      "source_name": "Dr LH Hiranandani Hospital",
+      "dest_name": "Seven Hills Hospital",
+      "route_edges": [
+        "e73",
+        "e3728",
+        "e2648",
+        "e72",
+        "e858",
+        "e494",
+        "e3368",
+        "e317"
+      ],
+      "route_length": 8,
+      "distance_km": 1.32
+    },
+    {
+      "source_index": 7,
+      "dest_index": 5,
+      "source_name": "Dr LH Hiranandani Hospital",
+      "dest_name": "Akshar Hospital",
+      "route_edges": [
+        "e73",
+        "e3728",
+        "e4496",
+        "e3123",
+        "e21",
+        "e2861",
+        "e4805",
+        "e283",
+        "e2803",
+        "e1458",
+        "e57"
+      ],
+      "route_length": 11,
+      "distance_km": 1.69
+    },
+    {
+      "source_index": 7,
+      "dest_index": 6,
+      "source_name": "Dr LH Hiranandani Hospital",
+      "dest_name": "Nanavati Hospital",
+      "route_edges": [
+        "e73",
+        "e1232",
+        "e3496",
+        "e3511",
+        "e4932",
+        "e3445",
+        "e161"
+      ],
+      "route_length": 7,
+      "distance_km": 1.48
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <input>
+        <node-files value="andheri.nod.xml"/>
+        <edge-files value="andheri.edg.xml"/>
+    </input>
+    <output>
+        <output-file value="andheri.net.xml"/>
+    </output>
+    <processing>
+        <geometry.remove value="false"/>
+        <roundabouts.guess value="true"/>
+        <junctions.join value="true"/>
+        <junctions.join-dist value="12"/>
+        <junctions.corner-detail value="5"/>
+        <no-turnarounds value="true"/>
+    </processing>
+    <projection>
+        <proj value="+proj=utm +zone=43 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"/>
+    </projection>
+    <tls_building>
+        <tls.default-type value="actuated"/>
+    </tls_building>
+    <report>
+        <no-warnings value="true"/>
+    </report>
+</configuration>
