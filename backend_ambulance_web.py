@@ -47,7 +47,7 @@ socketio = SocketIO(
 DATA_DIR = 'sumo_data'
 SUMO_CONFIG = os.path.join(DATA_DIR, 'simulation.sumocfg')
 SUMO_BINARY = 'sumo'
-MIN_VEHICLES = 50
+MIN_VEHICLES = 100
 GREEN_CORRIDOR_DETECTION_DISTANCE = 100
 SIGNAL_ACTIVATION_DISTANCE = 80
 SIGNAL_RELEASE_DELAY = 3
@@ -151,6 +151,15 @@ try:
     print(f"  ✅ {len(TRAFFIC_LIGHTS_REF)} reference traffic lights")
 except:
     pass
+
+ROUTE_BANK = []
+try:
+    with open(os.path.join(DATA_DIR, 'route_bank.json'), 'r') as f:
+        _rb_data = json.load(f)
+    ROUTE_BANK = _rb_data.get('short_routes', []) + _rb_data.get('medium_routes', [])
+    print(f"  ✅ {len(ROUTE_BANK)} routes from route_bank")
+except Exception as e:
+    print(f"  ⚠️  route_bank.json failed to load: {e} — vehicle injection features will be degraded")
 
 # ============================================================================
 # EDGE → FROM_NODE LOOKUP
@@ -349,10 +358,17 @@ def apply_real_speeds_to_sumo(flow_data):
 def inject_vehicles_for_congestion(target_congestion, current_congestion):
     """
     Inject extra vehicles to boost congestion to target level.
-    
+    Uses pre-built routes from route_bank.json for valid edge paths.
+
+    Args:
+        target_congestion (float): Desired congestion ratio (e.g. 0.45).
+        current_congestion (float): Measured congestion ratio from TomTom data.
+
+    Returns:
+        int: Number of vehicles successfully injected.
+
     Logic:
       - If current = 20%, target = 45% → need to add 25% more load
-      - More vehicles on high-priority roads = more congestion
       - Vehicles injected with 'now' departure = immediate
     """
     global injected_vehicle_counter
@@ -363,6 +379,10 @@ def inject_vehicles_for_congestion(target_congestion, current_congestion):
     if current_congestion >= target_congestion:
         return 0  # Already at or above target
 
+    if not ROUTE_BANK:
+        print(f"  ⚠️ No routes in route_bank — cannot inject vehicles")
+        return 0
+
     gap = target_congestion - current_congestion  # e.g., 0.25
 
     # Calculate vehicles needed
@@ -370,71 +390,88 @@ def inject_vehicles_for_congestion(target_congestion, current_congestion):
     vehicles_needed = int(gap * 1000)  # 0.25 gap = 250 vehicles
     vehicles_needed = max(50, min(vehicles_needed, 500))  # Cap 50-500
 
+    try:
+        current_count = traci.vehicle.getIDCount()
+    except Exception:
+        current_count = 0
+
     print(f"  📈 Congestion boost: {current_congestion:.1%} → {target_congestion:.1%}")
-    print(f"     Gap: {gap:.1%} → Injecting {vehicles_needed} vehicles")
+    print(f"     Gap: {gap:.1%} → Injecting {vehicles_needed} vehicles from route_bank")
+    print(f"     Current vehicles: {current_count}")
+
+    injected = 0
+    for _ in range(vehicles_needed):
+        route = random.choice(ROUTE_BANK)
+        injected_vehicle_counter += 1
+        veh_id = f"boost_{injected_vehicle_counter}"
+
+        try:
+            traci.vehicle.add(
+                vehID=veh_id,
+                routeID='',
+                typeID='DEFAULT_VEHTYPE',
+                depart='now',
+                departLane='best',
+                departSpeed='max'
+            )
+            traci.vehicle.setRoute(veh_id, route['edges'])
+            traci.vehicle.setColor(veh_id, (51, 130, 246, 255))  # Blue
+            injected += 1
+        except Exception:
+            continue
+
+    print(f"  ✅ Injected {injected}/{vehicles_needed} vehicles from route_bank")
+    return injected
+
+
+def maintain_minimum_vehicles():
+    """
+    Ensure at least MIN_VEHICLES are present in the simulation.
+    Uses pre-built routes from route_bank.json for valid edge paths.
+
+    Returns:
+        int: Number of background vehicles successfully spawned.
+    """
+    global injected_vehicle_counter
+
+    if not simulation_running or not ROUTE_BANK:
+        return 0
 
     try:
-        all_edges = traci.edge.getIDList()
-        valid_edges = [e for e in all_edges
-                       if not e.startswith(':') and not e.startswith('_')]
-
-        if len(valid_edges) < 10:
-            print(f"  ⚠️ Not enough edges")
-            return 0
-
-        # Weight edges by priority/lanes for realistic traffic
-        weighted = []
-        for eid in valid_edges:
-            try:
-                lane_count = traci.edge.getLaneNumber(eid)
-                # More lanes = more traffic weight
-                weight = max(1, lane_count * 2)
-                weighted.append((eid, weight))
-            except:
-                weighted.append((eid, 1))
-
-        total_w = sum(w for _, w in weighted)
-        edge_ids = [e for e, _ in weighted]
-        edge_weights = [w / total_w for _, w in weighted]
-
-        injected = 0
-        for i in range(vehicles_needed):
-            src = random.choices(edge_ids, weights=edge_weights, k=1)[0]
-            dst = random.choices(edge_ids, weights=edge_weights, k=1)[0]
-
-            attempts = 0
-            while dst == src and attempts < 10:
-                dst = random.choices(edge_ids, weights=edge_weights, k=1)[0]
-                attempts += 1
-
-            if dst == src:
-                continue
-
-            injected_vehicle_counter += 1
-            veh_id = f"boost_{injected_vehicle_counter}"
-
-            try:
-                traci.vehicle.add(
-                    vehID=veh_id,
-                    routeID='',
-                    typeID='DEFAULT_VEHTYPE',
-                    depart='now',
-                    departLane='best',
-                    departSpeed='max'
-                )
-                traci.vehicle.setRoute(veh_id, [src, dst])
-                traci.vehicle.setColor(veh_id, (51, 130, 246, 255))  # Blue
-                injected += 1
-            except:
-                # Route might be invalid — skip
-                continue
-
-        print(f"  ✅ Injected {injected}/{vehicles_needed} vehicles")
-        return injected
-
-    except Exception as e:
-        print(f"  ⚠️ Injection error: {e}")
+        current_count = traci.vehicle.getIDCount()
+    except Exception:
         return 0
+
+    if current_count >= MIN_VEHICLES:
+        return 0
+
+    needed = MIN_VEHICLES - current_count
+    print(f"  🚗 Vehicle count {current_count} < {MIN_VEHICLES} — injecting {needed} vehicles")
+
+    spawned = 0
+    for _ in range(needed):
+        route = random.choice(ROUTE_BANK)
+        injected_vehicle_counter += 1
+        veh_id = f"bg_{injected_vehicle_counter}"
+
+        try:
+            traci.vehicle.add(
+                vehID=veh_id,
+                routeID='',
+                typeID='DEFAULT_VEHTYPE',
+                depart='now',
+                departLane='best',
+                departSpeed='max'
+            )
+            traci.vehicle.setRoute(veh_id, route['edges'])
+            traci.vehicle.setColor(veh_id, (200, 200, 200, 255))  # Grey
+            spawned += 1
+        except Exception:
+            continue
+
+    if spawned:
+        print(f"  ✅ Spawned {spawned} background vehicles (total now: {current_count + spawned})")
+    return spawned
 
 
 # ============================================================================
@@ -636,6 +673,7 @@ def run_sumo_simulation():
         simulation_running = True
         step_count = 0
         last_log = time.time()
+        last_vehicle_check = 0
         approach_log_done = False
         CACHED_TL_APPROACHES.clear()
 
@@ -646,6 +684,14 @@ def run_sumo_simulation():
 
             sim_time = traci.simulation.getTime()
             vehicle_ids = traci.vehicle.getIDList()
+
+            # ================================================================
+            # MINIMUM VEHICLE MAINTENANCE (every 20 steps ≈ 10 seconds)
+            # ================================================================
+
+            if step_count - last_vehicle_check >= 20:
+                maintain_minimum_vehicles()
+                last_vehicle_check = step_count
 
             # ================================================================
             # GREEN CORRIDOR
@@ -794,8 +840,9 @@ def run_sumo_simulation():
                 greens = sum(1 for s in tl_data.values() if s['color'] == 'green')
                 reds = sum(1 for s in tl_data.values() if s['color'] == 'red')
                 yellows = sum(1 for s in tl_data.values() if s['color'] == 'yellow')
+                veh_count = len(vehicles_data)
                 print(f"  ⏱️ {int(sim_time)}s | "
-                      f"Veh: {len(vehicles_data)} | "
+                      f"Veh: {veh_count}/{MIN_VEHICLES} | "
                       f"Amb: {len(active_ambulances)} | "
                       f"Signals: {len(tl_data)} "
                       f"(🟢{greens} 🔴{reds} 🟡{yellows}) | "
@@ -1125,8 +1172,10 @@ if __name__ == '__main__':
     print(f"{'='*60}")
     print(f"  Hospitals:        {len(HOSPITALS)}")
     print(f"  Routes:           {ROUTE_DATA['assigned_routes']}")
+    print(f"  Route bank:       {len(ROUTE_BANK)} routes")
     print(f"  Edge→Node:        {len(EDGE_FROM_NODE)}")
     print(f"  Traffic segments: {len(TRAFFIC_FLOW)}")
+    print(f"  Min vehicles:     {MIN_VEHICLES}")
     print(f"  Min congestion:   {MIN_CONGESTION_TARGET:.0%}")
     print(f"\n  Backend:  http://localhost:5000")
     print(f"  Frontend: http://localhost:3000")
